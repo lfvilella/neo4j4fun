@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  neo4j:
+    build: neo4j
+    restart: ${DOCKER_RESTART:-unless-stopped}
+    ports:
+      - ${HTTP_PORT:-7474:7474}
+      - ${BOLT_PORT:-7687:7687}

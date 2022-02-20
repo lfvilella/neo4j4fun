@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  neo4j:
+    env_file:
+      - ./neo4j/.env.dev
+    volumes:
+      - ./neo4j/volumes/plugins:/plugins
+      - ./neo4j/volumes/data:/data
+      - ./neo4j/volumes/import:/import
